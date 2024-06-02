@@ -1,4 +1,4 @@
-package com.Touristo.Service;
+package com.Travellgo.Service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -7,24 +7,24 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Touristo.Entity.Booking;
-import com.Touristo.Entity.Bus;
-import com.Touristo.Entity.Customer;
-import com.Touristo.Entity.Feedback;
-import com.Touristo.Entity.Hotel;
-import com.Touristo.Entity.Packages;
-import com.Touristo.Entity.Route;
-import com.Touristo.Entity.Ticket;
-import com.Touristo.Exception.NotFoundException;
-import com.Touristo.Exception.TouristoException;
-import com.Touristo.Repository.BookingRepo;
-import com.Touristo.Repository.BusRepo;
-import com.Touristo.Repository.CustomerRepo;
-import com.Touristo.Repository.FeedbackRepo;
-import com.Touristo.Repository.HotelRepo;
-import com.Touristo.Repository.PackageRepo;
-import com.Touristo.Repository.RouteRepo;
-import com.Touristo.Repository.TicketRepo;
+import com.Travellgo.Entity.Booking;
+import com.Travellgo.Entity.Bus;
+import com.Travellgo.Entity.Customer;
+import com.Travellgo.Entity.Feedback;
+import com.Travellgo.Entity.Hotel;
+import com.Travellgo.Entity.Packages;
+import com.Travellgo.Entity.Route;
+import com.Travellgo.Entity.Ticket;
+import com.Travellgo.Exception.NotFoundException;
+import com.Travellgo.Exception.TravellgoException;
+import com.Travellgo.Repository.BookingRepo;
+import com.Travellgo.Repository.BusRepo;
+import com.Travellgo.Repository.CustomerRepo;
+import com.Travellgo.Repository.FeedbackRepo;
+import com.Travellgo.Repository.HotelRepo;
+import com.Travellgo.Repository.PackageRepo;
+import com.Travellgo.Repository.RouteRepo;
+import com.Travellgo.Repository.TicketRepo;
 
 @Service
 public class UserServicesImpl implements UserServices{
@@ -55,17 +55,17 @@ public class UserServicesImpl implements UserServices{
 	
 	
 	@Override
-	public Customer userSignup(Customer customer) throws TouristoException {
+	public Customer userSignup(Customer customer) throws TravellgoException {
 		Optional<Customer> opt = customerRepo.findByEmail(customer.getEmail());
 		if(opt.isPresent()) {
-			throw new TouristoException("User already registered");
+			throw new TravellgoException("User already registered");
 		}
 		customerRepo.save(customer);
 		return customer;
 	}
 
 	@Override
-	public Customer userLogin(String email, String password) throws NotFoundException, TouristoException {
+	public Customer userLogin(String email, String password) throws NotFoundException, TravellgoException {
 		Optional<Customer> opt = customerRepo.findByEmail(email);
 		if(!opt.isPresent()) {
 			throw new NotFoundException("User not found");
@@ -74,7 +74,7 @@ public class UserServicesImpl implements UserServices{
 		if(customer.getPassword().equals(password)) {
 			return customer;
 		}else {
-			throw new TouristoException("Invalid Credentials");	
+			throw new TravellgoException("Invalid Credentials");
 		}
 	}
 

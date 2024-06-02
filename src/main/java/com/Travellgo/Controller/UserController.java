@@ -1,4 +1,4 @@
-package com.Touristo.Controller;
+package com.Travellgo.Controller;
 
 import java.util.List;
 
@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Touristo.Entity.Booking;
-import com.Touristo.Entity.Bus;
-import com.Touristo.Entity.Customer;
-import com.Touristo.Entity.Hotel;
-import com.Touristo.Entity.Packages;
-import com.Touristo.Entity.Route;
-import com.Touristo.Entity.Ticket;
-import com.Touristo.Exception.NotFoundException;
-import com.Touristo.Exception.TouristoException;
-import com.Touristo.Service.UserServices;
+import com.Travellgo.Entity.Booking;
+import com.Travellgo.Entity.Bus;
+import com.Travellgo.Entity.Customer;
+import com.Travellgo.Entity.Hotel;
+import com.Travellgo.Entity.Packages;
+import com.Travellgo.Entity.Route;
+import com.Travellgo.Entity.Ticket;
+import com.Travellgo.Exception.NotFoundException;
+import com.Travellgo.Exception.TravellgoException;
+import com.Travellgo.Service.UserServices;
 
 @RestController
 @CrossOrigin(origins = "*") 
@@ -33,14 +33,14 @@ public class UserController {
 	
 	//User SignUp 
 	@PostMapping(value = "/userSignUp")
-	public ResponseEntity<Customer> customerSignUp(@RequestBody Customer customer) throws TouristoException{ 
+	public ResponseEntity<Customer> customerSignUp(@RequestBody Customer customer) throws TravellgoException {
 		Customer cust = userServices.userSignup(customer);
 		return new ResponseEntity<Customer>(cust, HttpStatus.ACCEPTED);
 	}
 	
 	//User Login
 	@GetMapping(value = "/userLogin/{username}/{password}")
-	public ResponseEntity<Customer> customerLogin(@PathVariable String username,@PathVariable String password) throws NotFoundException, TouristoException{
+	public ResponseEntity<Customer> customerLogin(@PathVariable String username,@PathVariable String password) throws NotFoundException, TravellgoException {
 		Customer cust = userServices.userLogin(username, password);
 		return new ResponseEntity<Customer>(cust, HttpStatus.OK);
 	}

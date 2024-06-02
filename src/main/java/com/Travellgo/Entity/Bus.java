@@ -1,4 +1,4 @@
-package com.Touristo.Entity;
+package com.Travellgo.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

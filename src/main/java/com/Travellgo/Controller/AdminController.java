@@ -1,4 +1,4 @@
-package com.Touristo.Controller;
+package com.Travellgo.Controller;
 
 import java.util.List;
 import java.util.Map;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Touristo.Entity.Bus;
-import com.Touristo.Entity.Hotel;
-import com.Touristo.Entity.Packages;
-import com.Touristo.Exception.NotFoundException;
-import com.Touristo.Service.AdminServices;
+import com.Travellgo.Entity.Bus;
+import com.Travellgo.Entity.Hotel;
+import com.Travellgo.Entity.Packages;
+import com.Travellgo.Exception.NotFoundException;
+import com.Travellgo.Service.AdminServices;
 
 @RestController
 @CrossOrigin(origins = "*") 

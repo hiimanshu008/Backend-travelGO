@@ -1,4 +1,4 @@
-package com.Touristo.Entity;
+package com.Travellgo.Entity;
 
 import java.util.ArrayList;
 import java.util.List;

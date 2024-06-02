@@ -1,4 +1,4 @@
-package com.Touristo.Exception;
+package com.Travellgo.Exception;
 
 import java.time.LocalDateTime;
 

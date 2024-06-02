@@ -1,14 +1,13 @@
-package com.Touristo.Service;
+package com.Travellgo.Service;
 
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.Touristo.Entity.Booking;
-import com.Touristo.Entity.Bus;
-import com.Touristo.Entity.Hotel;
-import com.Touristo.Entity.Packages;
+import com.Travellgo.Entity.Bus;
+import com.Travellgo.Entity.Hotel;
+import com.Travellgo.Entity.Packages;
 
 @Service
 public interface AdminServices {

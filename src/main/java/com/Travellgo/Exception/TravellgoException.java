@@ -1,8 +1,8 @@
 package com.Travellgo.Exception;
 
-public class TouristoException extends Exception {
+public class TravellgoException extends Exception {
 
-	public TouristoException(String message) {
+	public TravellgoException(String message) {
 		super(message);
 	}
 

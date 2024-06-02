@@ -1,4 +1,4 @@
-package com.Touristo.Repository;
+package com.Travellgo.Repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.Touristo.Entity.Hotel;
+import com.Travellgo.Entity.Hotel;
 
 @Repository
 public interface HotelRepo extends JpaRepository<Hotel, Integer>{

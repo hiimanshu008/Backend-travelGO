@@ -1,4 +1,4 @@
-package com.Touristo.Exception;
+package com.Travellgo.Exception;
 
 public class NotFoundException extends Exception{
 

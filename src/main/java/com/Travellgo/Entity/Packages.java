@@ -1,9 +1,8 @@
-package com.Touristo.Entity;
+package com.Travellgo.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.annotation.Nullable;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

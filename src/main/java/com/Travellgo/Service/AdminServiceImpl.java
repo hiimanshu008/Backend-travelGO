@@ -1,4 +1,4 @@
-package com.Touristo.Service;
+package com.Travellgo.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,18 +8,18 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Touristo.Entity.Booking;
-import com.Touristo.Entity.Bus;
-import com.Touristo.Entity.Hotel;
-import com.Touristo.Entity.Packages;
-import com.Touristo.Repository.BookingRepo;
-import com.Touristo.Repository.BusRepo;
-import com.Touristo.Repository.CustomerRepo;
-import com.Touristo.Repository.FeedbackRepo;
-import com.Touristo.Repository.HotelRepo;
-import com.Touristo.Repository.PackageRepo;
-import com.Touristo.Repository.RouteRepo;
-import com.Touristo.Repository.TicketRepo;
+import com.Travellgo.Entity.Booking;
+import com.Travellgo.Entity.Bus;
+import com.Travellgo.Entity.Hotel;
+import com.Travellgo.Entity.Packages;
+import com.Travellgo.Repository.BookingRepo;
+import com.Travellgo.Repository.BusRepo;
+import com.Travellgo.Repository.CustomerRepo;
+import com.Travellgo.Repository.FeedbackRepo;
+import com.Travellgo.Repository.HotelRepo;
+import com.Travellgo.Repository.PackageRepo;
+import com.Travellgo.Repository.RouteRepo;
+import com.Travellgo.Repository.TicketRepo;
 
 @Service
 public class AdminServiceImpl implements AdminServices {

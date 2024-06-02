@@ -1,4 +1,4 @@
-package com.Touristo.Exception;
+package com.Travellgo.Exception;
 
 import java.time.LocalDateTime;
 
@@ -31,8 +31,8 @@ public class GlobalExceptionHandler {
 		 return new ResponseEntity<ErrorDetails>(ed, HttpStatus.BAD_REQUEST);
 	}
 	
-	@ExceptionHandler(TouristoException.class)
-	public ResponseEntity<ErrorDetails> TouristoExceptionHandler(TouristoException ex, WebRequest we){
+	@ExceptionHandler(TravellgoException.class)
+	public ResponseEntity<ErrorDetails> TravellgoExceptionHandler(TravellgoException ex, WebRequest we){
 		ErrorDetails ed = new ErrorDetails();
 		 ed.setTimestamp(LocalDateTime.now());
 		 ed.setMessage(ex.getMessage());
